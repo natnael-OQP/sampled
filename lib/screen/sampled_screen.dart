@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:sampled/components/stepper.dart';
 
 import 'package:sampled/components/test_card.dart';
 
@@ -26,46 +27,7 @@ class SampledScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 30.0),
-                child: Column(
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const IconContainer(color: Colors.blue),
-                        Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(bottom: 10),
-                            color: Colors.black12,
-                            height: 2,
-                          ),
-                        ),
-                        const IconContainer(color: Colors.black12),
-                        Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(bottom: 10),
-                            color: Colors.black12,
-                            height: 2,
-                          ),
-                        ),
-                        const IconContainer(color: Colors.black12),
-                      ],
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text("Requested"),
-                        Text("Sampled"),
-                        Text("Received"),
-                      ],
-                    )
-                  ],
-                ),
-              ),
+              const MultiStep(),
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 margin: const EdgeInsets.only(top: 10),
@@ -143,37 +105,6 @@ class SampledScreen extends StatelessWidget {
               )
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class IconContainer extends StatelessWidget {
-  final Color color;
-  const IconContainer({
-    Key? key,
-    required this.color,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Transform.translate(
-      offset: const Offset(-5.0, -5.0),
-      child: Container(
-        width: 50,
-        height: 50,
-        decoration: BoxDecoration(
-          color: color,
-          border: Border.all(
-            color: Colors.white,
-            width: 3,
-          ),
-          borderRadius: BorderRadius.circular(50),
-        ),
-        child: const Icon(
-          Icons.list_alt,
-          color: Colors.white,
         ),
       ),
     );
