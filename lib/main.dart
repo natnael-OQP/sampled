@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sampled/screen/sampled_screen.dart';
+import 'package:sampled/screen/result_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Gordita',
       ),
-      home: const SampledScreen(),
+      home: const ResultScreen(),
     );
   }
 }
