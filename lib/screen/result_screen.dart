@@ -13,7 +13,11 @@ class ResultScreen extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 60, left: 15, right: 15),
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * .05,
+              left: 15,
+              right: 15,
+            ),
             child: SingleChildScrollView(
               child: Column(
                 children: [

@@ -7,7 +7,6 @@ import 'package:sampled/components/test_card.dart';
 
 class SampledScreen extends StatelessWidget {
   const SampledScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +14,11 @@ class SampledScreen extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 60, left: 15, right: 15),
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * .05,
+              left: 15,
+              right: 15,
+            ),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -32,7 +35,6 @@ class SampledScreen extends StatelessWidget {
                   const MultiStep(),
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 30),
-                    margin: const EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: const BorderRadius.all(
