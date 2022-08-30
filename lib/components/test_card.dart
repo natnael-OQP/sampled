@@ -8,11 +8,14 @@ class TestCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Container(
-      margin: const EdgeInsets.only(top: 10.0),
-      padding: const EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 10,
+      margin: EdgeInsets.only(bottom: height * .008),
+      padding: EdgeInsets.symmetric(
+        vertical: height * .03,
+        horizontal: width * .02,
       ),
       decoration: const BoxDecoration(
         border: Border(
@@ -27,9 +30,9 @@ class TestCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 7,
-                  horizontal: 16,
+                padding: EdgeInsets.symmetric(
+                  vertical: height * .008,
+                  horizontal: width * .04,
                 ),
                 decoration: BoxDecoration(
                   color: HexColor("#E5EDF9"),
@@ -46,9 +49,9 @@ class TestCard extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 16,
+                padding: EdgeInsets.symmetric(
+                  vertical: height * .005,
+                  horizontal: width * .04,
                 ),
                 decoration: BoxDecoration(
                   color: HexColor("#F7CCCC"),
@@ -71,9 +74,9 @@ class TestCard extends StatelessWidget {
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 15.0, bottom: 5),
-            child: Text(
+          Padding(
+            padding: EdgeInsets.only(top: height * .02, bottom: height * .007),
+            child: const Text(
               "Blood Cholesterol test",
               style: TextStyle(
                 fontWeight: FontWeight.w500,

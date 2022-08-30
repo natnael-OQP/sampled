@@ -12,8 +12,12 @@ class _MultiStepState extends State<MultiStep> {
   int currentIndex = 1;
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
+      padding:
+          EdgeInsets.symmetric(horizontal: width * .03, vertical: height * .03),
       child: Column(
         children: [
           Row(
@@ -32,7 +36,7 @@ class _MultiStepState extends State<MultiStep> {
               ),
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.only(bottom: 10),
+                  margin: EdgeInsets.only(bottom: height * .008),
                   height: 3,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -55,7 +59,7 @@ class _MultiStepState extends State<MultiStep> {
               ),
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.only(bottom: 10),
+                  margin: EdgeInsets.only(bottom: height * .008),
                   height: 3,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(

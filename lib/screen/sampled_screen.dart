@@ -9,15 +9,18 @@ class SampledScreen extends StatelessWidget {
   const SampledScreen({super.key});
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: HexColor("#F9FAFF"),
       body: ListView(
         children: [
           Padding(
             padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * .05,
-              left: 15,
-              right: 15,
+              top: height * .05,
+              left: width * .04,
+              right: width * .04,
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -34,7 +37,7 @@ class SampledScreen extends StatelessWidget {
                   ),
                   const MultiStep(),
                   Container(
-                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    padding: EdgeInsets.symmetric(vertical: height * .035),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: const BorderRadius.all(
@@ -73,9 +76,9 @@ class SampledScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 8.0),
-                          child: Text(
+                        Padding(
+                          padding: EdgeInsets.only(top: height * .008),
+                          child: const Text(
                             "lyosiyas Haile",
                             style: TextStyle(
                               fontSize: 21,

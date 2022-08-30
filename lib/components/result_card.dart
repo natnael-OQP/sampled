@@ -9,11 +9,13 @@ class ResultCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Container(
-      margin: const EdgeInsets.only(top: 10.0),
-      padding: const EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 10,
+      margin: EdgeInsets.only(top: height * .013),
+      padding: EdgeInsets.symmetric(
+        vertical: height * .025,
+        horizontal: width * .02,
       ),
       decoration: const BoxDecoration(
         border: Border(
@@ -31,9 +33,9 @@ class ResultCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 7,
-                  horizontal: 16,
+                padding: EdgeInsets.symmetric(
+                  vertical: height * .008,
+                  horizontal: width * .034,
                 ),
                 decoration: BoxDecoration(
                   color: HexColor("#E5EDF9"),
@@ -50,9 +52,9 @@ class ResultCard extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 16,
+                padding: EdgeInsets.symmetric(
+                  vertical: height * .005,
+                  horizontal: width * .04,
                 ),
                 decoration: BoxDecoration(
                   color: HexColor("#F7CCCC"),
@@ -75,9 +77,9 @@ class ResultCard extends StatelessWidget {
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 15.0, bottom: 5),
-            child: Text(
+          Padding(
+            padding: EdgeInsets.only(top: height * .02, bottom: height * .007),
+            child: const Text(
               "Blood Cholesterol test",
               style: TextStyle(
                 fontWeight: FontWeight.w500,
@@ -93,7 +95,7 @@ class ResultCard extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 15),
+            margin: EdgeInsets.symmetric(vertical: height * .02),
             height: 1,
             color: Colors.black12,
           ),
